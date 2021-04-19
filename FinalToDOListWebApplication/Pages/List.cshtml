@@ -1,0 +1,64 @@
+﻿@page
+@model FinalToDOListWebApplication.Pages.ListModel
+@{
+}
+
+
+<h1>Create</h1>
+
+<h4>ToDoList Page</h4>
+<hr />
+<div class="row" style="background-color:aquamarine">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ToDoList.EmailAddress" class="control-label"></label>
+                <input asp-for="ToDoList.EmailAddress" class="form-control" />
+                <span asp-validation-for="ToDoList.EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.Title" class="control-label"></label>
+                <input asp-for="ToDoList.Title" class="form-control" />
+                <span asp-validation-for="ToDoList.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.Descrption" class="control-label"></label>
+                <input asp-for="ToDoList.Descrption" class="form-control" />
+                <span asp-validation-for="ToDoList.Descrption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.AddedDate" class="control-label"></label>
+                <input asp-for="ToDoList.AddedDate" class="form-control" />
+                <span asp-validation-for="ToDoList.AddedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.DueDate" class="control-label"></label>
+                <input asp-for="ToDoList.DueDate" class="form-control" />
+                <span asp-validation-for="ToDoList.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.Done" class="control-label"></label>
+                <input asp-for="ToDoList.Done" class="form-control" />
+                <span asp-validation-for="ToDoList.Done" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoList.DoneDate" class="control-label"></label>
+                <input asp-for="ToDoList.DoneDate" class="form-control" />
+                <span asp-validation-for="ToDoList.DoneDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
