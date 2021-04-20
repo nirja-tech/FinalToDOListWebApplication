@@ -11,6 +11,11 @@ namespace FinalToDOListWebApplication.Model
 {
     public class ToDoList
     {
+        [Key]
+        [HiddenInput]
+        [Required]
+        public int ID { get; set; }
+
         [EmailAddress(ErrorMessage = "Invalid Entry")]
         [Required(ErrorMessage = "Please Enter Email Address")]
         [MaxLength(100)]
