@@ -1,0 +1,39 @@
+﻿@page
+@model FinalToDOListWebApplication.Pages.UserLoginModel
+@{
+}
+
+<h4>ToDoList Page</h4>
+<hr />
+<div class="row" style="background-color:aquamarine">
+    <div class="col-md-4">
+        <form method="post">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LoginPage.Username" class="control-label"></label>
+                <input asp-for="LoginPage.Username" class="form-control" />
+                <span asp-validation-for="LoginPage.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoginPage.Password" class="control-label"></label>
+                <input asp-for="LoginPage.Password" class="form-control" />
+                <span asp-validation-for="LoginPage.Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create"   class="nav-link text-dark" a asp-page="./List" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

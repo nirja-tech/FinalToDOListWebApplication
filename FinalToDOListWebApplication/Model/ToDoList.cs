@@ -28,8 +28,7 @@ namespace FinalToDOListWebApplication.Model
 
         [Required(ErrorMessage = "Please Enter Discription")]
         [StringLength(100, MinimumLength = 1)]
-        [RegularExpression(@"^(([A-Za-z]+[\s]{1}[A-za-z]+)|([A-Za-z]+))$", ErrorMessage = "Please enter upper and lower case alphabets only")]
-
+        
         public string Descrption { get; set; }
 
 

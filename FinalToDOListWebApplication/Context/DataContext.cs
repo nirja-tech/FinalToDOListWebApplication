@@ -14,6 +14,7 @@ namespace FinalToDOListWebApplication.Context
 
         }
         public DbSet<ToDoList> ToDos { get; set; }
+        public DbSet<LoginPage> LoginPages{ get; set; }
     }
    
 }

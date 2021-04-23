@@ -1,0 +1,61 @@
+﻿@page
+@model FinalToDOListWebApplication.Pages.list.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ToDoList</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.EmailAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.EmailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.Descrption)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.Descrption)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.AddedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.AddedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.DueDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.DueDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.Done)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.Done)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDoList.DoneDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ToDoList.DoneDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ToDoList.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
